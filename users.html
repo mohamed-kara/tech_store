@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users - Admin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="admin-layout">
+
+  <aside class="sidebar">
+    <h2>Mexus Admin</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="products.html">Products</a>
+    <a href="orders.html">Orders</a>
+    <a href="users.html" class="active">Users</a>
+    <a href="#" id="admin-logout" style="margin-top:40px; color:#ef4444;"><i class="fa-solid fa-sign-out-alt"></i> Logout</a>
+  </aside>
+
+  <main class="content" id="admin-users-page">
+
+    <h1 class="page-title" style="display:flex; justify-content:space-between; align-items:center;">
+      User Management
+      <input type="text" id="user-search" class="search" placeholder="Search users..." style="width: 250px; font-size:1rem;">
+    </h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="users-tbody">
+        <!-- Injected via script.js -->
+      </tbody>
+    </table>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

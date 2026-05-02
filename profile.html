@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Profile - Mexus Tech</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="profile-page">
+
+  <nav class="navbar">
+    <div class="logo">Mexus Tech</div>
+    <button class="mobile-menu-btn" id="menu-toggle" aria-label="Toggle Menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="index.html#shop">Shop</a>
+      <a href="cart.html">Cart <span id="cart-badge" class="cart-badge">0</span></a>
+      <a href="profile.html" class="active">Profile</a>
+      <a href="#" id="nav-logout">Logout</a>
+    </div>
+  </nav>
+
+  <main class="container page-top-wide">
+    
+    <!-- Account Info Card -->
+    <div class="profile-card">
+      <h1 class="profile-welcome">Welcome, <span id="profile-username" class="text-primary"></span>!</h1>
+      <div class="profile-info-grid">
+        <p><strong>Email:</strong> <span id="profile-email"></span></p>
+        <p><strong>Role:</strong> <span id="profile-role"></span></p>
+      </div>
+    </div>
+
+    <!-- Account Management -->
+    <div class="profile-card">
+      <h2 class="profile-section-title">Manage Account</h2>
+      
+      <div id="profile-msg" class="profile-msg"></div>
+
+      <div class="profile-form-grid profile-form-grid--mb">
+        <div class="form-group">
+          <label class="required form-label">Username</label>
+          <input type="text" id="edit-username" class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="required form-label">Email</label>
+          <input type="email" id="edit-email" class="form-input">
+        </div>
+      </div>
+
+      <div class="profile-form-grid profile-form-grid--mb">
+        <div class="form-group">
+          <label class="form-label">New Password <span class="form-label-hint">(leave blank to keep current)</span></label>
+          <input type="password" id="edit-password" placeholder="••••••••" class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Confirm New Password</label>
+          <input type="password" id="edit-password-confirm" placeholder="••••••••" class="form-input">
+        </div>
+      </div>
+
+      <button class="btn" id="save-profile-btn">Save Changes</button>
+    </div>
+
+    <!-- Order History -->
+    <div class="profile-card">
+      <h2 class="profile-section-title">Order History</h2>
+      <div id="profile-orders">
+        <!-- Injected via script.js -->
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Mexus Tech. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

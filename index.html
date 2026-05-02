@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mexus Tech Store</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Mexus Tech</div>
+    <button class="mobile-menu-btn" id="menu-toggle" aria-label="Toggle Menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="index.html#shop">Shop</a>
+      <a href="cart.html">Cart <span id="cart-badge"
+          style="background:var(--primary);color:#fff;padding:2px 6px;border-radius:10px;font-size:0.8rem;margin-left:5px;">0</span></a>
+      <a href="checkout.html">Checkout</a>
+      <a href="login.html" id="nav-login"><i class="fa-solid fa-user"></i> Login</a>
+      <a href="profile.html" id="nav-profile" style="display:none;"><i class="fa-solid fa-user-circle"></i> Profile</a>
+      <a href="#" id="nav-logout" style="display:none;"><i class="fa-solid fa-sign-out-alt"></i> Logout</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Next-Gen Tech, Delivered.</h1>
+      <p>Upgrade your setup with the latest gear, software, and accessories.</p>
+      <a href="#shop" class="btn">Shop Now</a>
+    </div>
+  </header>
+
+  <main class="container" id="shop">
+    <h2 class="section-title">Featured Products</h2>
+
+    <div class="shop-layout">
+
+      <aside class="filter-sidebar">
+        <h3>Filter by</h3>
+
+        <div class="filter-group">
+          <input type="text" id="search-input" placeholder="Search products...">
+        </div>
+
+        <div class="filter-group">
+          <h4>Category</h4>
+          <select id="category-filter" class="filter-select">
+            <option value="">All Categories</option>
+            <option value="smartphone">Smartphones</option>
+            <option value="laptop">Laptops</option>
+            <option value="tablet">Tablets</option>
+            <option value="gaming">Gaming</option>
+            <option value="monitor">Monitors</option>
+            <option value="accessory">Accessories</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <h4>Brand</h4>
+          <select id="brand-filter" class="filter-select">
+            <option value="">All Brands</option>
+            <!-- Brand options injected via script -->
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <h4>Price Range</h4>
+          <input type="range" min="0" max="3000" value="3000" class="price-slider">
+          <p class="price-label">Up to $3000</p>
+        </div>
+        <button class="btn btn-block" id="apply-filters">Apply Filters</button>
+      </aside>
+
+      <div class="products-container">
+        <div class="shop-header">
+          <h2>Results</h2>
+          <div class="sort-options">
+            <label for="sort-select">Sort by:</label>
+            <select id="sort-select">
+              <option value="newest">Newest First</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+        <div class="products-grid" id="products-grid">
+          <!-- Products injected via script.js -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Mexus Tech. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

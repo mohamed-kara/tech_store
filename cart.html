@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - Mexus Tech</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Mexus Tech</div>
+    <button class="mobile-menu-btn" id="menu-toggle" aria-label="Toggle Menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="index.html#shop">Shop</a>
+      <a href="cart.html" class="active">Cart <span id="cart-badge" class="cart-badge">0</span></a>
+      <a href="checkout.html">Checkout</a>
+      <a href="login.html" id="nav-login"><i class="fa-solid fa-user"></i> Login</a>
+      <a href="profile.html" id="nav-profile" class="nav-hidden"><i class="fa-solid fa-user-circle"></i> Profile</a>
+      <a href="#" id="nav-logout" class="nav-hidden"><i class="fa-solid fa-sign-out-alt"></i> Logout</a>
+    </div>
+  </nav>
+
+  <main class="container page-offset">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> / <span>Shopping Cart</span>
+    </div>
+
+    <h1 class="page-title">Your Cart</h1>
+
+    <div class="cart-layout">
+      
+      <div class="cart-items-container">
+        
+        <div class="cart-item">
+          <img src="assets/images/tech_store/sony WH-1000XM5.jpg" alt="Pro Wireless Headphones" onerror="this.src='https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=150&q=80'">
+          <div class="cart-item-info">
+            <h3>Pro Wireless Headphones</h3>
+            <p class="cart-item-variant">Color: Matte Black | Edition: Standard</p>
+          </div>
+          <div class="cart-item-quantity">
+            <input type="number" value="1" min="1" class="qty-input">
+          </div>
+          <div class="cart-item-price">$199.99</div>
+          <button class="remove-btn">✕</button>
+        </div>
+
+        <div class="cart-item">
+          <img src="assets/images/tech_store/mouse.jpg" alt="Gaming Mouse" onerror="this.src='https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=150&q=80'">
+          <div class="cart-item-info">
+            <h3>Ergonomic Gaming Mouse</h3>
+            <p class="cart-item-variant">Color: White</p>
+          </div>
+          <div class="cart-item-quantity">
+            <input type="number" value="2" min="1" class="qty-input">
+          </div>
+          <div class="cart-item-price">$159.98</div>
+          <button class="remove-btn">✕</button>
+        </div>
+
+      </div>
+
+      <div class="order-summary-box">
+        <h3>Order Summary</h3>
+        
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span>$359.97</span>
+        </div>
+        <div class="summary-row">
+          <span>Shipping</span>
+          <span>Free</span>
+        </div>
+        <div class="summary-row">
+          <span>Tax</span>
+          <span>$28.80</span>
+        </div>
+        
+        <div class="summary-total">
+          <span>Total</span>
+          <span>$388.77</span>
+        </div>
+
+        <a href="checkout.html" class="btn btn-block btn-large btn-centered">Proceed to Checkout</a>
+        <a href="index.html#shop" class="continue-shopping">← Continue Shopping</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Mexus Tech. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

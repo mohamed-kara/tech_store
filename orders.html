@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orders - Admin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="admin-layout">
+
+  <aside class="sidebar">
+    <h2>Mexus Admin</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="products.html">Products</a>
+    <a href="orders.html" class="active">Orders</a>
+    <a href="users.html">Users</a>
+    <a href="#" id="admin-logout" style="margin-top:40px; color:#ef4444;"><i class="fa-solid fa-sign-out-alt"></i> Logout</a>
+  </aside>
+
+  <main class="content" id="admin-orders-page">
+
+    <h1 class="page-title" style="display:flex; justify-content:space-between; align-items:center;">
+      Order Management
+      <input type="text" id="order-search" class="search" placeholder="Search orders..." style="width: 250px; font-size:1rem;">
+    </h1>
+
+    <div style="margin-bottom: 20px;">
+      <button class="btn" id="export-orders"><i class="fa-solid fa-download"></i> Export Orders to CSV</button>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Customer</th>
+          <th>Date</th>
+          <th>Total</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="orders-tbody">
+        <!-- Injected via script.js -->
+      </tbody>
+    </table>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro Wireless Headphones - Mexus Tech</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Mexus Tech</div>
+    <button class="mobile-menu-btn" id="menu-toggle" aria-label="Toggle Menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="index.html#shop">Shop</a>
+      <a href="cart.html">Cart <span id="cart-badge" class="cart-badge">0</span></a>
+      <a href="checkout.html">Checkout</a>
+      <a href="login.html" id="nav-login"><i class="fa-solid fa-user"></i> Login</a>
+      <a href="profile.html" id="nav-profile" class="nav-hidden"><i class="fa-solid fa-user-circle"></i> Profile</a>
+      <a href="#" id="nav-logout" class="nav-hidden"><i class="fa-solid fa-sign-out-alt"></i> Logout</a>
+    </div>
+  </nav>
+
+  <main class="container product-page">
+    
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> / <a href="index.html#shop">Shop</a> / <span>Pro Wireless Headphones</span>
+    </div>
+
+    <div class="product-detail-layout">
+      
+      <div class="product-gallery">
+        <div class="main-image">
+          <img src="assets/images/tech_store/sony WH-1000XM5.jpg" alt="Pro Wireless Headphones" onerror="this.src='https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=800&q=80'">
+        </div>
+        
+        <div class="thumbnails" id="dynamic-thumbnails">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+
+      <div class="product-info-detailed">
+        <h1 class="product-title">Pro Wireless Headphones</h1>
+        <p class="product-availability">Status: <span class="in-stock">In Stock (Ready to ship)</span></p>
+        <p class="product-price-large">$199.99</p>
+
+        <p class="product-description product-desc-dynamic" id="dynamic-desc"></p>
+        
+        <div class="selection-group hidden-group" id="color-selection-group">
+          <h4>Choose Color:</h4>
+          <div class="options-container" id="color-options-container">
+            <!-- Injected via JS -->
+          </div>
+        </div>
+
+        <div class="selection-group hidden-group" id="storage-selection-group">
+          <h4>Choose Storage:</h4>
+          <div class="options-container" id="storage-options-container">
+            <!-- Injected via JS -->
+          </div>
+        </div>
+
+        <div class="purchase-action purchase-action--centered">
+          <input type="number" value="1" min="1" class="quantity-input qty-fixed">
+          <button class="btn btn-large btn-flex">Add to Cart</button>
+        </div>
+
+        <div class="product-specs">
+          <h4>Key Specifications:</h4>
+          <ul id="dynamic-specs-list">
+            <!-- Injected via JS -->
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Mexus Tech. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

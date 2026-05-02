@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation - Mexus Tech</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="confirm-page">
+
+  <nav class="navbar">
+    <div class="logo">Mexus Tech</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+    </div>
+  </nav>
+
+  <main class="container" style="margin-top: 100px; max-width: 600px; text-align:center;">
+    
+    <div style="background:var(--surface); padding:40px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.05);">
+        <i class="fa-solid fa-circle-check" style="font-size: 4rem; color: #10b981; margin-bottom:20px;"></i>
+        <h1 class="page-title" style="margin-bottom:10px;">Order Successful!</h1>
+        <p style="color:var(--text-light); margin-bottom:30px;">Thank you for shopping with us. Your order has been placed successfully.</p>
+        
+        <div style="text-align:left; background:var(--bg); padding:20px; border-radius:8px; margin-bottom:30px;">
+            <p><strong>Order ID:</strong> <span id="confirm-id"></span></p>
+            <p><strong>Customer:</strong> <span id="confirm-customer"></span></p>
+            <p><strong>Total Paid:</strong> <strong id="confirm-total" style="color:var(--primary); font-size:1.1rem;"></strong></p>
+            <p><strong>Payment Method:</strong> <span id="confirm-payment"></span></p>
+            
+            <h4 style="margin-top:15px; margin-bottom:5px;">Items:</h4>
+            <ul id="confirm-items" style="list-style:inside; padding-left:10px; color:var(--text-light); font-size:0.9rem;">
+                <!-- Injected via JS -->
+            </ul>
+        </div>
+
+        <a href="index.html" class="btn">Return to Store</a>
+        <a href="profile.html" class="continue-shopping">View My Orders</a>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

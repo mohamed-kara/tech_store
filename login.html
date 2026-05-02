@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login - Mexus Tech</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="login-page">
+  
+  <nav class="navbar">
+    <div class="logo">Mexus Tech</div>
+    <button class="mobile-menu-btn" id="menu-toggle" aria-label="Toggle Menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="index.html#shop">Shop</a>
+      <a href="cart.html">Cart <span id="cart-badge" class="cart-badge">0</span></a>
+      <a href="checkout.html">Checkout</a>
+      <a href="login.html" class="active" id="nav-login"><i class="fa-solid fa-user"></i> Login</a>
+      <a href="profile.html" id="nav-profile" class="nav-hidden"><i class="fa-solid fa-user-circle"></i> Profile</a>
+      <a href="#" id="nav-logout" class="nav-hidden"><i class="fa-solid fa-sign-out-alt"></i> Logout</a>
+    </div>
+  </nav>
+
+  <div class="login-box login-box--top">
+    
+    <div class="login-tab-bar">
+      <h2 id="tab-login" class="tab-header active">Login</h2>
+      <h2 id="tab-signup" class="tab-header">Sign Up</h2>
+    </div>
+
+    <!-- Login Form -->
+    <div id="form-login" class="login-form">
+      <div id="login-error" class="form-error-msg"></div>
+      
+      <select id="login-role" class="form-select">
+        <option value="client">Client Login</option>
+        <option value="admin">Administrator Login</option>
+      </select>
+
+      <input type="text" id="login-username" placeholder="Username">
+      <input type="password" id="login-password" placeholder="Password">
+      <button class="btn" id="login-submit">Login</button>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="form-signup" class="login-form login-form--hidden">
+      <div id="signup-error" class="form-error-msg"></div>
+      <input type="text" id="signup-username" placeholder="Choose Username">
+      <input type="email" id="signup-email" placeholder="Email Address">
+      <input type="password" id="signup-password" placeholder="Create Password">
+      <button class="btn" id="signup-submit">Sign Up</button>
+    </div>
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

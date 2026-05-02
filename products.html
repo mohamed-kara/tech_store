@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Admin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+  <div class="admin-layout">
+
+    <aside class="sidebar">
+      <h2>Mexus Admin</h2>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="orders.html">Orders</a>
+      <a href="users.html">Users</a>
+      <a href="#" id="admin-logout" style="margin-top:40px; color:#ef4444;"><i class="fa-solid fa-sign-out-alt"></i>
+        Logout</a>
+    </aside>
+
+    <main class="content" id="admin-products-page">
+
+      <div class="page-header">
+        <h1 class="page-title">Product Management</h1>
+        <input type="text" id="product-search" class="search" placeholder="Search products..." style="width: 250px;">
+      </div>
+
+      <div class="form-container">
+        <h3 id="prod-form-title" style="margin-bottom: 20px; color: var(--primary);">Add New Product</h3>
+        <input type="hidden" id="edit-product-id">
+
+        <div class="form">
+          <div class="admin-form-row">
+            <div>
+              <label class="required">Product Name</label>
+              <input type="text" id="prod-name" placeholder="e.g. iPhone 15 Pro" required>
+            </div>
+            <div>
+              <label class="required">Brand</label>
+              <input type="text" id="prod-brand" placeholder="e.g. Apple" required>
+            </div>
+          </div>
+
+          <div class="admin-form-row">
+            <div>
+              <label class="required">Price ($)</label>
+              <input type="number" id="prod-price" placeholder="999" min="0" step="0.01" required>
+            </div>
+            <div>
+              <label class="required">Category</label>
+              <select id="prod-category" required>
+                <option value="smartphone">Smartphone</option>
+                <option value="laptop">Laptop</option>
+                <option value="tablet">Tablet</option>
+                <option value="gaming">Gaming</option>
+                <option value="monitor">Monitor</option>
+                <option value="accessory">Accessory</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group-full">
+            <label>Description</label>
+            <textarea id="prod-desc" placeholder="Detailed product description" style="height:60px;"></textarea>
+          </div>
+
+        <!-- Matrix Variant Combinations -->
+        <div style="grid-column: 1 / -1; border-top: 1px solid var(--border); padding-top:15px; margin-top:5px;">
+          <h4 style="margin-bottom: 10px;">Product Combinations <span
+              style="font-size:0.8rem; font-weight:normal; color:var(--text-light);">(Define stock for each specific
+              Color + Storage combination)</span></h4>
+          <div id="variants-container" style="display:flex; flex-direction:column; gap:10px;">
+            <!-- Matrix Rows injected via JS -->
+            <div class="variant-row">
+              <input type="text" class="var-color" placeholder="Color">
+              <input type="text" class="var-storage" placeholder="Storage">
+              <input type="number" class="var-qty" placeholder="Stock" min="1" value="1">
+              <input type="text" class="var-img-url" placeholder="Image URL">
+              <input type="file" class="var-img-file" accept="image/*">
+              <button type="button" class="btn btn-danger remove-var-btn"
+                style="padding: 10px; font-size:1rem; height:45px;">✕</button>
+            </div>
+          </div>
+          <button type="button" id="add-variant-btn" class="btn"
+            style="margin-top:10px; background:#6b7280; font-size: 0.9rem;">+ Add New Combination</button>
+        </div>
+
+          <div class="form-group-full">
+            <label>Technical Specifications <span style="font-size:0.8rem; font-weight:normal; color:var(--text-light);">(comma-separated)</span></label>
+            <textarea id="prod-specs" placeholder="e.g. A17 Pro chip, 6.1 inch display, 48MP camera" rows="3"></textarea>
+          </div>
+
+          <div class="form-group-full" style="display:flex; gap:10px;">
+            <button class="btn" id="prod-add-btn" style="flex: 1;">Add Product</button>
+            <button class="btn" id="cancel-edit" style="display:none; background:#6b7280;">Cancel Edit</button>
+          </div>
+        </div>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Stock</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="products-tbody">
+          <!-- Injected via script.js -->
+        </tbody>
+      </table>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
